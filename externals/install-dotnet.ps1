@@ -1272,10 +1272,6 @@ if ([string]::IsNullOrEmpty($NormalizedQuality) -and 0 -eq $DownloadLinks.count)
     }
 }
 
-if ($DownloadLinks.count -eq 0) {
-    throw "Failed to resolve the exact version number."
-}
-
 if ($DryRun) {
     PrintDryRunOutput $MyInvocation $DownloadLinks
     return
